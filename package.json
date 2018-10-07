@@ -1,0 +1,44 @@
+{
+  "name": "react-es7-ssr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kuakling/react-es7-ssr.git",
+  "author": "Surakit Choodet <kuakling@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development node src/index.js",
+    "prod": "rimraf dist && cross-env NODE_ENV=production RUN=true node src/index.js",
+    "build": "rimraf dist && NODE_ENV=production node src/index.js",
+    "serve": "SERVE=true node src/index.js",
+    "kill": "kill -9 $(lsof -i:3000 |grep node)"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "react-hot-loader": "^4.3.11",
+    "stats-webpack-plugin": "^0.7.0",
+    "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.20.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-flush-chunks": "^2.0.3",
+    "webpack-hot-middleware": "^2.24.2",
+    "webpack-hot-server-middleware": "^0.5.0",
+    "webpack-merge": "^4.1.4"
+  }
+}
